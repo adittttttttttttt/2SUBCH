@@ -35,7 +35,7 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "0"))
 FORCE_SUB_GROUP = int(os.environ.get("FORCE_SUB_GROUP", "0"))
 
 # set True if you want to prevent users from forwarding files from bot
-PROTECT_CONTENT = True if environ.get('PROTECT_CONTENT', "False") == "True" else False
+PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", None) == "True"
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
